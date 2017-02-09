@@ -52,6 +52,14 @@ suite('String calculator should', function () {
         assert.equal(sum, 1 + 2 + 3 + 4 + 5);
     });
 
+    test('return sum of two numbers separated by new line', function () {
+        let calculator = createCalculator();
+
+        let sum = calculator.add('1\n2');
+
+        assert.equal(sum, 1 + 2);
+    });
+
     let createCalculator = function () {
         return new Calculator();
     };

@@ -18,13 +18,13 @@ class Calculator {
     }
 
     _parseMultipleNumbers(numbers) {
-        return numbers.split(',').reduce((a, b) => {
+        return numbers.split(/[\n,]/).reduce((a, b) => {
             return this._parseSingleNumber(a) + this._parseSingleNumber(b)
         });
     }
 
     _isSingleNumber(numbers) {
-        return numbers.indexOf(',') === -1;
+        return numbers.indexOf(',') === -1 && numbers.indexOf('\n') === -1;
     }
 
     _parseSingleNumber(numbers) {
