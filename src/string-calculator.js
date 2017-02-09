@@ -18,8 +18,9 @@ class Calculator {
     }
 
     _parseTwoNumbers(numbers) {
-        let summands = numbers.split(',');
-        return this._parseSingleNumber(summands[0]) + this._parseSingleNumber(summands[1]);
+        return numbers.split(',').reduce((a, b) => {
+            return this._parseSingleNumber(a) + this._parseSingleNumber(b)
+        });
     }
 
     _isSingleNumber(numbers) {
