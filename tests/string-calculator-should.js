@@ -20,6 +20,14 @@ suite('String calculator should', function () {
         assert.equal(sum, 1);
     });
 
+    test('return single number if input is that number', function () {
+        var calculator = createCalculator();
+
+        let sum = calculator.add('2');
+
+        assert.equal(sum, 2);
+    });
+
     let createCalculator = function () {
         return new Calculator();
     };
