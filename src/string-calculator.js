@@ -14,7 +14,8 @@ class Calculator {
             return this._parseSingleNumber(numbers);
         }
 
-        return this._parseSingleNumber(numbers[0]) + this._parseSingleNumber(numbers[2]);
+        let summands = numbers.split(',');
+        return this._parseSingleNumber(summands[0]) + this._parseSingleNumber(summands[1]);
 
     }
 
