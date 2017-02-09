@@ -1,12 +1,7 @@
 "use strict";
 
 var assert = require('chai').assert;
-
-class Calculator {
-    add() {
-        return 0;
-    }
-}
+var Calculator = require('../src/string-calculator');
 
 suite('String calculator should', function () {
     test('return default value if input is empty', function () {
