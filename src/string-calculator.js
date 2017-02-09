@@ -14,9 +14,12 @@ class Calculator {
             return this._parseSingleNumber(numbers);
         }
 
+        return this._parseTwoNumbers(numbers);
+    }
+
+    _parseTwoNumbers(numbers) {
         let summands = numbers.split(',');
         return this._parseSingleNumber(summands[0]) + this._parseSingleNumber(summands[1]);
-
     }
 
     _isSingleNumber(numbers) {
