@@ -1,12 +1,24 @@
 "use strict";
 
 class Calculator {
+    constructor() {
+        this._defaultValue = 0;
+    }
+
     add(numbers) {
-        if (!numbers) {
-            return 0;
+        if (this._isEmpty(numbers)) {
+            return this._defaultValue;
         }
 
+        return this._parseSingleNumber(numbers);
+    }
+
+    _parseSingleNumber(numbers) {
         return parseInt(numbers, 10);
+    }
+
+    _isEmpty(numbers) {
+        return !numbers;
     }
 }
 
