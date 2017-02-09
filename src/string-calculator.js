@@ -14,10 +14,10 @@ class Calculator {
             return this._parseSingleNumber(numbers);
         }
 
-        return this._parseTwoNumbers(numbers);
+        return this._parseMultipleNumbers(numbers);
     }
 
-    _parseTwoNumbers(numbers) {
+    _parseMultipleNumbers(numbers) {
         return numbers.split(',').reduce((a, b) => {
             return this._parseSingleNumber(a) + this._parseSingleNumber(b)
         });
