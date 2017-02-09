@@ -28,6 +28,14 @@ suite('String calculator should', function () {
         assert.equal(sum, 2);
     });
 
+    test('return sum of two one-digit numbers', function () {
+        let calculator = createCalculator();
+
+        let sum = calculator.add('1,2');
+
+        assert.equal(sum, 1 + 2);
+    });
+
     let createCalculator = function () {
         return new Calculator();
     };

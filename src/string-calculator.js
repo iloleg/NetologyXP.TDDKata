@@ -10,7 +10,12 @@ class Calculator {
             return this._defaultValue;
         }
 
-        return this._parseSingleNumber(numbers);
+        if (numbers.indexOf(',') === -1) {
+            return this._parseSingleNumber(numbers);
+        }
+
+        return parseInt(numbers[0]) + parseInt(numbers[2]);
+
     }
 
     _parseSingleNumber(numbers) {
