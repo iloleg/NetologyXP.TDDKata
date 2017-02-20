@@ -1,6 +1,7 @@
 "use strict";
 var assert = require('chai').assert;
 
+
 function add(input) {
     let result = 0;
     if (input == "") {
@@ -40,6 +41,16 @@ suite('String Calculator testing', function () {
             let sum = add(input);
 
             assert.equal(3, sum);
+        });
+    })
+
+    suite('more that two init numbers', function () {
+        test(' 1,2,3 value will return 6', function () {
+            let input = "1,2,3";
+
+            let sum = add(input);
+
+            assert.equal(6, sum);
         });
     })
 
