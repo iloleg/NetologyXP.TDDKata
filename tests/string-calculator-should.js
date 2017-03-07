@@ -58,6 +58,7 @@ suite('String calculator should', function () {
         let sum = calculator.add('1\n2');
 
         assert.equal(sum, 1 + 2);
+
     });
 
     let createCalculator = function () {
